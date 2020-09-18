@@ -1,14 +1,14 @@
-const instances = require('./lib/instances'),
-  series = require('./lib/series'),
-  studies = require('./lib/studies'),
-  patients = require('./lib/patients'),
-  tools = require('./lib/tools'),
-  system = require('./lib/system'),
-  changes = require('./lib/changes'),
-  _exports = require('./lib/exports'),
-  queries = require('./lib/queries'),
-  modalities = require('./lib/modalities'),
-  statistics = require('./lib/statistics');
+const instances = require('./lib/instances');
+const series = require('./lib/series');
+const studies = require('./lib/studies');
+const patients = require('./lib/patients');
+const tools = require('./lib/tools');
+const system = require('./lib/system');
+const changes = require('./lib/changes');
+const _exports = require('./lib/exports');
+const queries = require('./lib/queries');
+const modalities = require('./lib/modalities');
+const statistics = require('./lib/statistics');
 /**
  * Creates a new Client
  * @class
@@ -30,6 +30,8 @@ class Client  {
     if ('undefined' === typeof param) param = {};
 
     this.url = param.url || 'http://localhost:8042';
+    this.headers = param.headers || {};
+    this.params = param.params || {};
 
     /**
      * Orthanc REST API's user credentials
