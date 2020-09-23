@@ -20,8 +20,5 @@
   "dependencies": {
     "request": "^2.55.0",
     "superagent": "^6.1.0"
-  },
-  "engines": {
-    "node": ">=5.11.0 <12.0.0"
   }
 }
